@@ -1,77 +1,56 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
+import Hexapod from "@/public/hexapod.jpeg"
+import Hexapod2 from "@/public/hexapod2.jpeg"
+import RoboticArm from "@/public/robotic-arm.jpeg"
 
 interface Product {
   id: number
   name: string
   description: string
-  image: string
+  image: string | StaticImageData
   price: string
 }
 
 interface ProductSectionProps {
   title: string
   description: string
-  type: "robots" | "iot"
+  type: "iot"
 }
 
 export default function ProductSection({ title, description, type }: ProductSectionProps) {
-  const robotProducts: Product[] = [
-    {
-      id: 1,
-      name: "IndustriBot X1",
-      description: "Industrial automation robot with advanced precision control and AI capabilities.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $12,999",
-    },
-    {
-      id: 2,
-      name: "LogistiBot Pro",
-      description: "Warehouse logistics robot designed for efficient inventory management and transport.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $9,499",
-    },
-    {
-      id: 3,
-      name: "MediBot Assistant",
-      description: "Healthcare assistant robot for patient monitoring and medical supply delivery.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $15,999",
-    },
-  ]
-
   const iotProducts: Product[] = [
     {
       id: 1,
-      name: "SmartSensor Pro",
-      description: "Industrial-grade IoT sensors with real-time monitoring and predictive analytics.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $499",
+      name: "Basic Hexapod",
+      description: "Entry-level 6-legged robot platform with basic movement controls, perfect for STEM education and hobbyist programming projects.",
+      image: Hexapod,
+      price: "Starting at ₹14,999",
     },
     {
       id: 2,
-      name: "ConnectHub Enterprise",
-      description: "Centralized IoT management system for seamless device integration and control.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $1,299",
+      name: "Cave Hexapod",
+      description: "Rugged hexapod with enhanced lighting, sensors and stabilization systems designed specifically for cave exploration and confined spaces.",
+      image: Hexapod2,
+      price: "Starting at ₹39,999",
     },
     {
       id: 3,
-      name: "DataFlow Analytics",
-      description: "Advanced IoT data processing platform with customizable dashboards and insights.",
-      image: "/placeholder.svg?height=400&width=600",
-      price: "Starting at $899",
+      name: "Ai Powered Arm",
+      description: "Precision robotic arm with machine learning capabilities for adaptive object manipulation, computer vision integration, and automated task learning.",
+      image: RoboticArm,
+      price: "Starting at ₹59,999",
     },
   ]
 
-  const products = type === "robots" ? robotProducts : iotProducts
-  const sectionId = type === "robots" ? "robots" : "iot"
+  const products = type === "iot" ? iotProducts : []
+  const sectionId = type
 
   return (
-    <section id={sectionId} className="py-16">
+    <section id={sectionId} className="py-16 bg-gradient-to-b from-[#0A2647] to-[#081c36]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -79,11 +58,13 @@ export default function ProductSection({ title, description, type }: ProductSect
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <span className="text-[#00E8FC]">{title}</span>
+        </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">{description}</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
         {products.map((product, index) => (
           <motion.div
             key={product.id}
@@ -91,26 +72,29 @@ export default function ProductSection({ title, description, type }: ProductSect
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-[#0A2647]/50 border border-[#00E8FC]/20 rounded-lg overflow-hidden hover:border-[#00E8FC]/50 transition-all duration-300"
+            className="bg-[#0A2647]/70 border border-[#00E8FC]/20 rounded-lg overflow-hidden hover:border-[#00E8FC]/80 transition-all duration-300 shadow-lg hover:shadow-[#00E8FC]/20"
           >
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-52 overflow-hidden">
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2647] to-transparent opacity-60"></div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
+              <h3 className="text-xl font-bold text-white mb-2">
+                <span className="text-[#00E8FC]">{product.name}</span>
+              </h3>
               <p className="text-gray-300 mb-4">{product.description}</p>
               <p className="text-[#00E8FC] font-medium mb-4">{product.price}</p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="#contact"
-                  className="bg-[#00E8FC] text-[#0A2647] px-4 py-2 rounded-md font-medium inline-block hover:bg-[#00E8FC]/80 transition-colors duration-300"
+                  className="bg-[#00E8FC] text-[#0A2647] px-4 py-2 rounded-md font-medium inline-block hover:bg-[#00E8FC]/90 transition-colors duration-300 shadow-md"
                 >
-                  Learn More
+                  Know More
                 </Link>
               </motion.div>
             </div>
@@ -122,9 +106,9 @@ export default function ProductSection({ title, description, type }: ProductSect
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             href="#contact"
-            className="bg-transparent text-[#00E8FC] border border-[#00E8FC] px-6 py-3 rounded-md font-medium inline-block hover:bg-[#00E8FC]/10 transition-colors duration-300"
+            className="bg-transparent text-[#00E8FC] border-2 border-[#00E8FC] px-6 py-3 rounded-md font-medium inline-block hover:bg-[#00E8FC]/10 transition-colors duration-300"
           >
-            View All {type === "robots" ? "Robots" : "IoT Products"}
+            View All IoT Solutions for India
           </Link>
         </motion.div>
       </div>

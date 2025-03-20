@@ -5,6 +5,7 @@ import type React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import Consultancy from "@/public/consultancy.jpg"
 
 interface Service {
   id: number
@@ -18,7 +19,7 @@ export default function ConsultancySection() {
     {
       id: 1,
       title: "Technology Assessment",
-      description: "Comprehensive evaluation of your current systems and identification of automation opportunities.",
+      description: "Comprehensive evaluation of your existing infrastructure tailored to Indian business requirements and regulatory frameworks.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,7 @@ export default function ConsultancySection() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#00E8FC"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -40,8 +41,8 @@ export default function ConsultancySection() {
     },
     {
       id: 2,
-      title: "Implementation Strategy",
-      description: "Tailored roadmap for integrating robotics and IoT solutions into your business operations.",
+      title: "Digital Transformation Strategy",
+      description: "India-focused roadmap for integrating robotics and IoT solutions, considering local supply chains and market dynamics.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,7 @@ export default function ConsultancySection() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#00E8FC"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -63,8 +64,8 @@ export default function ConsultancySection() {
     },
     {
       id: 3,
-      title: "Training & Support",
-      description: "Comprehensive training programs and ongoing technical support for your team.",
+      title: "Skill Development & Support",
+      description: "Specialized training programs in Hindi and English with ongoing technical support for your Indian team.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +73,7 @@ export default function ConsultancySection() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#00E8FC"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -85,8 +86,8 @@ export default function ConsultancySection() {
     },
     {
       id: 4,
-      title: "ROI Analysis",
-      description: "Detailed cost-benefit analysis and return on investment projections for technology adoption.",
+      title: "Investment Analysis",
+      description: "Cost-benefit analysis with ROI projections tailored for Indian economic conditions and business environment.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +95,7 @@ export default function ConsultancySection() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#00E8FC"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -110,7 +111,7 @@ export default function ConsultancySection() {
   ]
 
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="py-16 bg-[#0A2647]/95">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -118,13 +119,13 @@ export default function ConsultancySection() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Consultancy Services</h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Expert guidance to help your business leverage the full potential of robotics and IoT technologies.
+        <h2 className="text-3xl md:text-4xl font-bold text-[#00E8FC] mb-4">Consultancy Services</h2>
+        <p className="text-gray-100 max-w-2xl mx-auto">
+          Expert guidance to help Indian businesses leverage innovative technologies for the digital economy.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
         {services.map((service, index) => (
           <motion.div
             key={service.id}
@@ -132,13 +133,15 @@ export default function ConsultancySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-[#0A2647]/50 border border-[#00E8FC]/20 rounded-lg p-6 hover:border-[#00E8FC]/50 transition-all duration-300"
+            className="bg-[#0A2647] border-2 border-[#00E8FC]/20 rounded-lg p-6 hover:border-[#00E8FC]/70 transition-all duration-300 shadow-lg hover:shadow-[#00E8FC]/20"
           >
             <div className="flex items-start">
-              <div className="text-[#00E8FC] mr-4">{service.icon}</div>
+              <div className="text-[#00E8FC] mr-4 bg-[#0A2647]/80 p-3 rounded-full border border-[#00E8FC]/30">
+                {service.icon}
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl font-bold text-[#00E8FC] mb-2">{service.title}</h3>
+                <p className="text-gray-200">{service.description}</p>
               </div>
             </div>
           </motion.div>
@@ -150,29 +153,29 @@ export default function ConsultancySection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
-        className="mt-16 bg-gradient-to-r from-[#0A2647] to-[#071A32] border border-[#00E8FC]/20 rounded-lg p-8"
+        className="mt-16 bg-gradient-to-r from-[#0A2647] to-[#071A32] border-2 border-[#00E8FC]/30 rounded-lg p-8 max-w-7xl mx-auto shadow-xl shadow-[#00E8FC]/5 mx-4"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-300 mb-6">
-              Our expert consultants are ready to help you navigate the complex world of robotics and IoT
-              implementation. Schedule a free consultation today to discover how our solutions can drive efficiency and
-              innovation in your operations.
+            <h3 className="text-2xl font-bold text-[#00E8FC] mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-gray-100 mb-6">
+              Our team of experts understands the unique challenges of the Indian market. We help you navigate the 
+              technology landscape with solutions designed for India&apos;s infrastructure, compliance requirements, and 
+              business ecosystem. Let&apos;s build a future-ready business together.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="#contact"
-                className="bg-[#00E8FC] text-[#0A2647] px-6 py-3 rounded-md font-medium inline-block hover:bg-[#00E8FC]/80 transition-colors duration-300"
+                className="bg-[#00E8FC] text-[#0A2647] px-6 py-3 rounded-md font-medium inline-block hover:bg-white transition-colors duration-300 shadow-lg shadow-[#00E8FC]/30"
               >
-                Schedule a Consultation
+                Book Free Consultation
               </Link>
             </motion.div>
           </div>
-          <div className="relative h-64 rounded-lg overflow-hidden">
+          <div className="relative h-64 rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Consultancy Services"
+              src= {Consultancy}
+              alt="Tech Consultancy in India"
               fill
               className="object-cover"
             />
