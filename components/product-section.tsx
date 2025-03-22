@@ -25,14 +25,14 @@ export default function ProductSection({ title, description, type }: ProductSect
   const iotProducts: Product[] = [
     {
       id: 1,
-      name: "Basic Hexapod",
+      name: "Milhex",
       description: "Entry-level 6-legged robot platform with basic movement controls, perfect for STEM education and hobbyist programming projects.",
       image: Hexapod,
       price: "Starting at ₹14,999",
     },
     {
       id: 2,
-      name: "Cave Hexapod",
+      name: "Hexdoc",
       description: "Rugged hexapod with enhanced lighting, sensors and stabilization systems designed specifically for cave exploration and confined spaces.",
       image: Hexapod2,
       price: "Starting at ₹39,999",

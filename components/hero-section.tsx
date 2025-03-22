@@ -49,7 +49,7 @@ export default function HeroSection() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="#connect"
+                href="#contact"
                 className="bg-transparent text-white border-2 border-[#00E8FC] px-8 py-4 rounded-md font-bold text-lg inline-block hover:bg-[#00E8FC]/10 transition-colors duration-300"
               >
                 Partner With Us
