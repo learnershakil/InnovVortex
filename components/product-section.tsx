@@ -101,17 +101,6 @@ export default function ProductSection({ title, description, type }: ProductSect
           </motion.div>
         ))}
       </div>
-
-      <div className="text-center mt-12">
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Link
-            href="#contact"
-            className="bg-transparent text-[#00E8FC] border-2 border-[#00E8FC] px-6 py-3 rounded-md font-medium inline-block hover:bg-[#00E8FC]/10 transition-colors duration-300"
-          >
-            View All IoT Solutions for India
-          </Link>
-        </motion.div>
-      </div>
     </section>
   )
 }
