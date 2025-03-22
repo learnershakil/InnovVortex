@@ -316,7 +316,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">Phone</h4>
-                    <p className="text-gray-300">+91 74164 42006</p>
+                    <p className="text-gray-300">+91 90147 85659, +91 74164 42006</p>
                   </div>
                 </div>
 
@@ -339,7 +339,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">Email</h4>
-                    <p className="text-gray-300">info@innovvortex.co.in</p>
+                    <p className="text-gray-300">bhanumahesh938@gmail.com</p>
+                    <p className="text-gray-300">manishkumarveliboina@gmail.com</p>
                   </div>
                 </div>
 

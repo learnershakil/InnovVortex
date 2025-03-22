@@ -18,8 +18,8 @@ export default function ConsultancySection() {
   const services: Service[] = [
     {
       id: 1,
-      title: "Technology Assessment",
-      description: "Comprehensive evaluation of your existing infrastructure tailored to Indian business requirements and regulatory frameworks.",
+      title: "3D Designing & Prototyping",
+      description: "We specialize in creating high-quality functional and 3D-printable designs for various applications. Whether you need custom mechanical parts, enclosures, or complex assemblies, we ensure precision and efficiency in our designs.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,18 +31,18 @@ export default function ConsultancySection() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="lucide lucide-clipboard-check"
+          className="lucide lucide-cube"
         >
-          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-          <path d="m9 14 2 2 4-4" />
+          <path d="m21 16-9 5-9-5V8l9-5 9 5v8z" />
+          <path d="m3 8 9 5 9-5" />
+          <path d="M12 3v10" />
         </svg>
       ),
     },
     {
       id: 2,
-      title: "Digital Transformation Strategy",
-      description: "India-focused roadmap for integrating robotics and IoT solutions, considering local supply chains and market dynamics.",
+      title: "Robotics Education & Training",
+      description: "We offer hands-on robotics training for schools, colleges, and professionals, bridging the gap between theory and practical application. Our programs cover robotics, automation, and AI-driven technologies, equipping learners with the skills needed to develop and operate intelligent robotic systems.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,18 +54,25 @@ export default function ConsultancySection() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="lucide lucide-route"
+          className="lucide lucide-cpu"
         >
-          <circle cx="6" cy="19" r="3" />
-          <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
-          <circle cx="18" cy="5" r="3" />
+          <rect x="4" y="4" width="16" height="16" rx="2" />
+          <rect x="9" y="9" width="6" height="6" />
+          <path d="M15 2v2" />
+          <path d="M15 20v2" />
+          <path d="M2 15h2" />
+          <path d="M2 9h2" />
+          <path d="M20 15h2" />
+          <path d="M20 9h2" />
+          <path d="M9 2v2" />
+          <path d="M9 20v2" />
         </svg>
       ),
     },
     {
       id: 3,
-      title: "Skill Development & Support",
-      description: "Specialized training programs in Hindi and English with ongoing technical support for your Indian team.",
+      title: "IoT & Smart Device Development",
+      description: "We design and develop IoT-enabled smart devices, integrating sensors and wireless communication for real-time data monitoring and automation. Whether it's for industrial automation or commercial use, our solutions are customized to the needs of the customer.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -77,17 +84,19 @@ export default function ConsultancySection() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="lucide lucide-graduation-cap"
+          className="lucide lucide-wifi"
         >
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-          <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+          <path d="M12 20h.01" />
+          <path d="M17 14a5 5 0 0 0-10 0" />
+          <path d="M19.071 8.929A10 10 0 0 0 4.93 8.93" />
+          <path d="M22 4A16 16 0 0 0 2 4" />
         </svg>
       ),
     },
     {
       id: 4,
-      title: "Investment Analysis",
-      description: "Cost-benefit analysis with ROI projections tailored for Indian economic conditions and business environment.",
+      title: "End-to-End Product Development",
+      description: "From concept to a fully functional prototype, we handle the entire product design and development process. Our team integrates mechanical, electronic, and software components to create innovative solutions tailored to your specific needs.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,12 +108,12 @@ export default function ConsultancySection() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="lucide lucide-bar-chart-3"
+          className="lucide lucide-package"
         >
-          <path d="M3 3v18h18" />
-          <path d="M18 17V9" />
-          <path d="M13 17V5" />
-          <path d="M8 17v-3" />
+          <path d="M16.5 9.4 7.55 4.24" />
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          <polyline points="3.29 7 12 12 20.71 7" />
+          <line x1="12" y1="22" x2="12" y2="12" />
         </svg>
       ),
     },

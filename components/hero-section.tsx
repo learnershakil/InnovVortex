@@ -36,7 +36,7 @@ export default function HeroSection() {
             Empowering <span className="text-[#00E8FC]">India&apos;s Future</span> With Smart Innovation
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Pioneering indigenous technology solutions tailored for India&apos;s unique challenges, from smart cities to digital transformation.
+            Pioneering indigenous technology solutions tailored for India&apos;s unique challenges, from disaster management to industrial robotics.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

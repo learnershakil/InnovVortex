@@ -37,12 +37,6 @@ export default function Home() {
           type="iot"
         />
 
-        <ProductSection
-          title="IoT Products"
-          description="Smart devices that connect and optimize your business operations."
-          type="iot"
-        />
-
         <ConsultancySection />
       </section>
 
